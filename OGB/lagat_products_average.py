@@ -16,6 +16,8 @@ split_idx = dataset.get_idx_split()
 evaluator = Evaluator(name='ogbn-products')
 data = dataset[0]
 
+# data_adj_t = PygNodePropPredDataset('ogbn-products', transform=T.ToSparseTensor())[0]
+
 adj_scipy = sp.csr_matrix(PygNodePropPredDataset(name='ogbn-products', transform=T.ToSparseTensor())[0].adj_t.to_scipy())
 
 train_idx = split_idx['train']

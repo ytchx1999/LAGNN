@@ -20,6 +20,8 @@ bash semi.sh
 cd OGB
 # If you want to pre-train the generative model, run the following command:
 python cvae_generate_products.py --latent_size 10 --pretrain_lr 1e-5 --total_iterations 10000 --batch_size 8192
+python cvae_generate_arxiv.py --latent_size 10 --pretrain_lr 1e-5 --total_iterations 10000 --batch_size 8192
+python cvae_generate_proteins.py --latent_size 10 --pretrain_lr 1e-5 --total_iterations 10000 --batch_size 8192
 # Train downstream GNNs
 bash full.sh
 ```
